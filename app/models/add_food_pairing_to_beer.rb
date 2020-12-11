@@ -1,0 +1,2 @@
+class AddFoodPairingToBeer < ApplicationRecord
+end
