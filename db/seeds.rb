@@ -10,16 +10,20 @@ require_relative '../config/environment'
 require 'json'
 
 Beer.destroy_all
+User.destroy_all
 beers_array = []
+villagers_array = []
 
 
 id=1
-3.times do
+60.times do
     beers = RestClient.get("https://api.punkapi.com/v2/beers/#{id}")
     id +=1
     data = JSON.parse(beers)
     beers_array.push(data)
 end
+
+
 
 def food_pairings_to_array(beer)
     food_pairings = []
@@ -65,8 +69,9 @@ end
 
 
 
-# User.create(
-#     name: "user",
-#     email: "user@gmail.com",
-#     password: "1234"
-# )
+User.create(
+    name: "stacey",
+    age: 22,
+    email: "stacey@gmail.com",
+    password: "1234"
+)

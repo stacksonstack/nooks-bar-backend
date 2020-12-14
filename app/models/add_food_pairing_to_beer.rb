@@ -1,2 +1,0 @@
-class AddFoodPairingToBeer < ApplicationRecord
-end
