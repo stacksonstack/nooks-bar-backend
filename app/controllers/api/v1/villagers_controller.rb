@@ -12,7 +12,7 @@ class Api::V1::VillagersController < ApplicationController
     end
 
     def create
-        @villager = Villager.new(villager_params)
+        @villager = Villager.create(villager_params)
         render json: @villager
     end
 

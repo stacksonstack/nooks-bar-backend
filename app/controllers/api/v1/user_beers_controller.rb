@@ -11,9 +11,18 @@ class Api::V1::UserBeersController < ApplicationController
     end
 
     def create
-        @user_beer = UserBeer.new(user_beer_params)
+        @user_beer = UserBeer.create(user_beer_params)
         render json: @user_beer
     end
+
+    def destroy
+        @user_beer = UserBeer.find_by(user_id: params[:user_id], beer_id: params[:beer_id])
+        @user_beer.destroy
+
+        @user_beers = User.find(params[:user_id]).beers
+        render json: @user_beers
+    end
+    
 
     private 
 

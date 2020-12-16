@@ -11,7 +11,7 @@ class Api::V1::UserGamesController < ApplicationController
     end
 
     def create
-        @user_game = UserGame.new(user_game_params)
+        @user_game = UserGame.create(user_game_params)
         render json: @user_game
     end
 

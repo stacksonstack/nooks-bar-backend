@@ -5,8 +5,9 @@ Rails.application.routes.draw do
       resources :users
       resources :beers
       resources :user_games
-      resources :user_beers
+      resources :user_beers, except: :destroy
       resources :villagers
+      delete 'users/:user_id/user_beers/:beer_id', :to => 'user_beers#destroy'
     end
   end
 end
