@@ -11,6 +11,8 @@ require 'json'
 
 Beer.destroy_all
 User.destroy_all
+UserBeer.destroy_all
+
 beers_array = []
 villagers_array = []
 

@@ -22,7 +22,6 @@ class Api::V1::UserBeersController < ApplicationController
         @user_beers = User.find(params[:user_id]).beers
         render json: @user_beers
     end
-    
 
     private 
 
