@@ -16,6 +16,12 @@ class Api::V1::BeersController < ApplicationController
         render json: @beer
     end
 
+    def update
+        @beer = Beer.find(params[:id])
+        @beer.update(beer_params)
+        render json: @beer
+    end
+
     private 
 
     def beer_params
