@@ -38,20 +38,13 @@ ActiveRecord::Schema.define(version: 2020_12_10_220619) do
     t.index ["user_id"], name: "index_user_beers_on_user_id"
   end
 
-  create_table "user_games", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.integer "wins"
-    t.integer "losses"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_user_games_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.integer "age"
     t.string "email"
     t.string "password"
+    t.integer "wins"
+    t.integer "losses"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -65,5 +58,4 @@ ActiveRecord::Schema.define(version: 2020_12_10_220619) do
 
   add_foreign_key "user_beers", "beers"
   add_foreign_key "user_beers", "users"
-  add_foreign_key "user_games", "users"
 end

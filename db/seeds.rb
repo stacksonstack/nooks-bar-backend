@@ -51,23 +51,6 @@ beers_array.each do |beer|
     )
 end
 
-# meals_array.each do |meal|
-#     Meal.create(
-#        
-#         ingredient: ingredient_to_array(meal),
-#         measurement: measurement_to_array(meal)
-#     )
-# end
-
-# def ingredient_to_array(meal)
-#     ingredients_array = []
-#     counter = 1
-#     while counter <= 20
-#         ingredients_array.push(meal["meals"][0]["strIngredient#{counter}"])
-#         counter += 1
-#     end
-#     ingredients_array.reject(&:blank?)
-# end
 
 
 
