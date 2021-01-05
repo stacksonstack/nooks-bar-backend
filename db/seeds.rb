@@ -58,5 +58,7 @@ User.create(
     name: "stacey",
     age: 22,
     email: "stacey@gmail.com",
-    password: "1234"
+    password: "1234",
+    wins: 5,
+    losses: 2
 )
