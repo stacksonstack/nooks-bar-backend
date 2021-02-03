@@ -18,7 +18,7 @@ villagers_array = []
 
 
 id=1
-90.times do
+100.times do
     beers = RestClient.get("https://api.punkapi.com/v2/beers/#{id}")
     id +=1
     data = JSON.parse(beers)
