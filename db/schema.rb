@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_12_10_220619) do
     t.integer "dislikes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "food_pairings", default: [], array: true
+    t.text "food_pairing", default: [], array: true
   end
 
   create_table "user_beers", force: :cascade do |t|

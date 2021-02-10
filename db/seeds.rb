@@ -28,13 +28,13 @@ end
 
 
 def food_pairings_to_array(beer)
-    food_pairings = []
+    food_pairing = []
         counter = 0
         while counter < beer[0]["food_pairing"].length
-            food_pairings.push(beer[0]["food_pairing"][counter])
+            food_pairing.push(beer[0]["food_pairing"][counter])
             counter +=1
         end
-    food_pairings
+    food_pairing
 end
 
 beers_array.each do |beer|
@@ -47,7 +47,7 @@ beers_array.each do |beer|
         abv: beer[0]["abv"],
         likes: 0,
         dislikes: 0,
-        food_pairings: food_pairings_to_array(beer)
+        food_pairing: food_pairings_to_array(beer)
     )
 end
 

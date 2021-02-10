@@ -5,6 +5,7 @@ This app enables customers to browse through our large collection of beers, save
 - Ruby on Rails
 - Active Model Serializer
 - Rack
+- Active Record
 
 ## Getting Started
 - Fork this repo
